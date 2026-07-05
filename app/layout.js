@@ -24,7 +24,7 @@ const body = Karla({
 const __jsonld = {"@context":"https://schema.org","@type":"Event","name":"Reuni Akbar Angkatan 2010","description":"Undangan reuni digital"};
 
 export const metadata = {
-  metadataBase: new URL("https://undangan-reuni.vercel.app"),
+  metadataBase: new URL("https://reuni.pintuweb.com"),
   title: "Undangan Reuni Digital — Angkatan 2010 SMA Harapan Bangsa",
   description: "Undangan reuni akbar digital yang nostalgik. Kumpul kembali, kenang masa sekolah, dan konfirmasi kehadiran dalam satu tautan.",
   applicationName: "Undangan Digital",
@@ -32,11 +32,11 @@ export const metadata = {
   authors: [{ name: "Undangan Digital" }],
   creator: "Undangan Digital",
   publisher: "Undangan Digital",
-  alternates: { canonical: "https://undangan-reuni.vercel.app" },
+  alternates: { canonical: "https://reuni.pintuweb.com" },
   openGraph: {
     type: "website",
     locale: "id_ID",
-    url: "https://undangan-reuni.vercel.app",
+    url: "https://reuni.pintuweb.com",
     siteName: "Undangan Digital",
     title: "Undangan Reuni Digital — Angkatan 2010 SMA Harapan Bangsa",
     description: "Undangan reuni akbar digital yang nostalgik. Kumpul kembali, kenang masa sekolah, dan konfirmasi kehadiran dalam satu tautan.",
