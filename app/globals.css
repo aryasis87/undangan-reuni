@@ -1,0 +1,69 @@
+@import "tailwindcss";
+
+/* ============================================================
+   TEMA REUNI — Yearbook / Scrapbook Retro (terakota & mustard)
+   Konsep album kenangan: polaroid, selotip, kertas tua, nostalgia.
+   ============================================================ */
+@theme {
+  --color-cream: #f4ecd9;
+  --color-blush: #e8d8b8;
+  --color-rose: #c8553d;
+  --color-rose-deep: #6e3a2c;
+  --color-gold: #e2a44f;
+  --color-ink: #3a2c22;
+  --color-muted: #8a7763;
+
+  --font-display: var(--font-bungee), Impact, sans-serif;
+  --font-script: var(--font-gochi), cursive;
+  --font-body: var(--font-karla), system-ui, sans-serif;
+}
+
+html { scroll-behavior: smooth; overflow-x: hidden; }
+
+body {
+  background-color: var(--color-cream);
+  color: var(--color-ink);
+  font-family: var(--font-body);
+  overflow-x: hidden;
+  /* tekstur kertas tua halus */
+  background-image: radial-gradient(rgba(110, 58, 44, 0.05) 1px, transparent 1px);
+  background-size: 18px 18px;
+}
+
+.font-display { font-family: var(--font-display); }
+.font-script { font-family: var(--font-script); }
+
+/* --- Polaroid & selotip --- */
+.polaroid {
+  background: #fffdf7;
+  padding: 0.75rem 0.75rem 2.75rem;
+  box-shadow: 0 10px 22px -10px rgba(58, 44, 34, 0.45);
+}
+.tape {
+  position: absolute;
+  left: 50%;
+  top: -10px;
+  height: 22px;
+  width: 84px;
+  transform: translateX(-50%) rotate(-3deg);
+  background: rgba(226, 164, 79, 0.55);
+  box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--color-blush); }
+::-webkit-scrollbar-thumb { background: var(--color-rose); border-radius: 9999px; }
+
+@keyframes floaty { 0%,100% { transform: translateY(0) rotate(var(--r,0deg)); } 50% { transform: translateY(-10px) rotate(var(--r,0deg)); } }
+.animate-floaty { animation: floaty 5s ease-in-out infinite; }
+
+:focus-visible { outline: 3px solid var(--color-rose); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

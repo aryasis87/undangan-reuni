@@ -1,0 +1,37 @@
+import { MapPin } from 'lucide-react';
+import Reveal from './ui/Reveal';
+import config from '@/lib/data';
+
+// Lokasi acara reuni.
+export default function MapEmbed() {
+  const { location } = config;
+  return (
+    <section className="relative z-10 px-6 py-20">
+      <div className="mx-auto max-w-2xl text-center">
+        <p className="font-script text-3xl text-rose-deep sm:text-4xl">Ketemuan di...</p>
+        <h2 className="mt-1 font-display text-3xl text-rose">Lokasi</h2>
+        <Reveal className="mt-8">
+          <div className="-rotate-1 border-8 border-cream bg-cream shadow-md">
+            <iframe
+              src={location.mapEmbed}
+              title="Peta lokasi acara"
+              className="h-64 w-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+          <p className="mt-5 text-sm font-bold text-ink">{location.label}</p>
+          <a
+            href={location.mapLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 inline-flex items-center gap-2 rounded-full bg-rose px-6 py-3 text-sm font-bold text-cream transition hover:bg-rose-deep"
+          >
+            <MapPin size={16} /> Buka di Google Maps
+          </a>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
