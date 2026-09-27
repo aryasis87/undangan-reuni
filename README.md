@@ -1,5 +1,11 @@
 # Undangan Digital — Reuni (Yearbook / Scrapbook Retro)
 
+**Demo live:** https://undangan-reuni-livid.vercel.app
+
+![Tangkapan layar](public/og.jpg)
+
+> Undangan contoh dengan data fiktif. Formulir RSVP hanya demo dan tidak mengirim data.
+
 Konsep **album kenangan / scrapbook retro** — nostalgia angkatan:
 
 - **ScrapbookCover** — sampul album + tumpukan polaroid, tombol *Buka Album*
@@ -18,3 +24,7 @@ Komponen **`Polaroid`** reusable. Tema **terakota–mustard** + tekstur kertas t
 npm install && npm run dev
 ```
 Semua konten di **`lib/data.js`** (objek `reunion`, `throwback`, `gallery` polaroid, `attendees`).
+
+---
+
+Bagian dari koleksi 8 undangan digital di [PortalUndangan](https://portal-undangan-eta.vercel.app). Dibuat oleh [PintuWeb](https://pintuweb.com), jasa pembuatan website.

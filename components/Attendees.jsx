@@ -17,7 +17,7 @@ export default function Attendees() {
     e.preventDefault();
     const n = name.trim();
     if (!n) return;
-    // TODO: kirim ke backend/Firebase
+    // Undangan contoh: nama hanya ditempel di layar pengunjung, tidak disimpan.
     setList((prev) => [n, ...prev]);
     setName('');
     setJustAdded(true);
@@ -50,6 +50,11 @@ export default function Attendees() {
           {justAdded && (
             <p className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-rose">
               <Check size={15} /> Asik, namamu sudah ditempel di dinding!
+            </p>
+          )}
+          {list.length > initial.length && (
+            <p className="mt-2 text-xs font-semibold text-muted">
+              Ini undangan contoh, jadi namamu hanya tampil di layarmu sendiri.
             </p>
           )}
         </Reveal>
