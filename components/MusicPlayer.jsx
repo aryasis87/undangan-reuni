@@ -33,10 +33,11 @@ export default function MusicPlayer({ playing }) {
       <audio ref={audioRef} src={config.music.src} loop preload="none" />
       <button
         onClick={toggle}
-        aria-label="Putar/jeda musik"
+        aria-label={isPlaying ? `Jeda musik: ${config.music.title}` : `Putar musik: ${config.music.title}`}
+        title={config.music.title}
         className="fixed bottom-5 right-5 z-40 flex h-12 w-12 items-center justify-center rounded-full bg-rose-deep text-cream shadow-lg transition hover:bg-ink"
       >
-        {isPlaying ? <Pause size={18} /> : <Music size={18} className="animate-pulse" />}
+        {isPlaying ? <Pause size={18} aria-hidden="true" /> : <Music size={18} className="motion-safe:animate-pulse" aria-hidden="true" />}
       </button>
     </>
   );

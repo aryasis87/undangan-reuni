@@ -34,10 +34,10 @@ export default function Memories() {
 
         <Reveal delay={0.1} className="mx-auto mt-8 max-w-md">
           <form onSubmit={submit} className="space-y-3">
-            <input value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Namamu" className={field} required />
-            <textarea value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Tulis kenangan paling berkesan..." rows={3} className={`${field} resize-none`} required />
+            <input aria-label="Namamu" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} placeholder="Namamu" className={field} required />
+            <textarea aria-label="Kenangan paling berkesan" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Tulis kenangan paling berkesan..." rows={3} className={`${field} resize-none`} required />
             <button type="submit" className="inline-flex items-center gap-2 rounded-full bg-rose px-6 py-3 text-sm font-bold text-cream transition hover:bg-rose-deep">
-              <Send size={15} /> Tempel Kenangan
+              <Send size={15} aria-hidden="true" /> Tempel Kenangan
             </button>
           </form>
         </Reveal>

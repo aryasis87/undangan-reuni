@@ -7,11 +7,11 @@
 @theme {
   --color-cream: #f4ecd9;
   --color-blush: #e8d8b8;
-  --color-rose: #c8553d;
+  --color-rose: #9e402d;
   --color-rose-deep: #6e3a2c;
   --color-gold: #e2a44f;
   --color-ink: #3a2c22;
-  --color-muted: #8a7763;
+  --color-muted: #695b4c;
 
   --font-display: var(--font-bungee), Impact, sans-serif;
   --font-script: var(--font-gochi), cursive;

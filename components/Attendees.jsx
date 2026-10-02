@@ -31,12 +31,14 @@ export default function Attendees() {
           <p className="font-script text-3xl text-rose-deep sm:text-4xl">Sampai jumpa!</p>
           <h2 className="mt-1 font-display text-3xl text-rose">Sudah Hadir</h2>
           <p className="mt-3 text-sm font-semibold text-muted">{list.length} sahabat sudah konfirmasi hadir</p>
+          <p className="mt-1 text-xs text-muted">Daftar contoh — nama yang kamu tambahkan hanya tampil di layar ini.</p>
         </Reveal>
 
         {/* Form RSVP */}
         <Reveal delay={0.1} className="mx-auto mt-8 max-w-md">
           <form onSubmit={submit} className="flex flex-col gap-3 sm:flex-row">
             <input
+              aria-label="Namamu"
               value={name}
               onChange={(e) => setName(e.target.value)}
               placeholder="Tulis namamu..."
@@ -44,7 +46,7 @@ export default function Attendees() {
               required
             />
             <button type="submit" className="inline-flex shrink-0 items-center justify-center gap-2 rounded-full bg-rose px-6 py-3 text-sm font-bold text-cream transition hover:bg-rose-deep">
-              <UserPlus size={16} /> Saya Hadir!
+              <UserPlus size={16} aria-hidden="true" /> Saya Hadir!
             </button>
           </form>
           {justAdded && (

@@ -17,7 +17,7 @@ export default function Polaroid({ src, caption, rotate = '0deg', tape = true, o
         <Image src={src} alt={caption || ''} fill sizes="(max-width:640px) 45vw, 240px" className="object-cover" />
       </span>
       {caption && (
-        <span className="absolute inset-x-0 bottom-2 text-center font-script text-xl text-ink">{caption}</span>
+        <span className="absolute inset-x-0 bottom-2 truncate px-3 text-center font-script text-xl text-ink">{caption}</span>
       )}
     </Tag>
   );
